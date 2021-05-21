@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Profile Clone</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/4b69ab2878.js"></script>
+  </head>
+  <body>
+    <section class="header"><p>GH Profile Finder</p></section>
+    <main class="container">
+      <div class="github__logo">
+        <img src="/img/logo.png" class="github__logo-img" alt="Github Mark" />
+      </div>
+      <div class="form_container">
+        <form action="profile.html" method="GET">
+          <label for="username">Github Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Search user profile by github username e.g janedoe"
+          />
+          <input type="submit" class="submit__btn" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

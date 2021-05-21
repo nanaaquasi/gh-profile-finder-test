@@ -1,0 +1,427 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+::placeholder {
+  color: rgba(36, 41, 46, 0.527);
+  font-size: 14px;
+}
+
+::-ms-input-placeholder {
+  color: rgba(36, 41, 46, 0.527);
+  font-size: 14px;
+}
+
+.form_container {
+  width: 40%;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 1rem 0;
+}
+form input[type=text] {
+  padding: 1rem 1rem;
+  border-color: rgba(204, 204, 204, 0.274);
+  font-size: 14px;
+  border-radius: 0.5rem;
+}
+form .submit__btn {
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  border-radius: 0.3rem;
+  background: #238636;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: #24292d;
+  width: 100vw;
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.header p {
+  color: #fff;
+  font-weight: 700;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+.header__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__profile-avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #9e9aa1;
+  margin-bottom: 2rem;
+}
+.content__profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.content__profile-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content__profile-description hr {
+  color: rgba(90, 90, 90, 0.212);
+}
+.content__profile-description--name {
+  display: flex;
+  flex-direction: column;
+}
+.content__profile-description--name :first-child {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32.5px;
+}
+.content__profile-description--name :nth-child(2) {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
+}
+.content__profile-description--about {
+  margin: 2rem 0;
+}
+.content__profile-description--about .intro {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #24292e;
+  margin-bottom: 2rem;
+}
+.content__profile-description--about .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.content__profile-description--about .stats div {
+  display: flex;
+  align-items: center;
+}
+.content__profile-description--about .stats div p {
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
+.content__repos {
+  display: flex;
+  flex-direction: column;
+}
+.content__repos .seperator {
+  width: 100%;
+  height: 1px;
+  background: rgba(94, 94, 94, 0.26);
+}
+.content__repos-display {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(94, 94, 94, 0.085);
+  padding: 0 2rem 0 0rem;
+}
+.content__repos-display .tab {
+  display: flex;
+  align-items: center;
+}
+.content__repos-display .tab:not(:first-child) {
+  margin-left: 4rem;
+}
+.content__repos-display .tab .icon {
+  margin-right: 0.8rem;
+}
+.content__repos-display--overview {
+  padding-bottom: 1rem;
+}
+.content__repos-display--repos {
+  border-bottom: 3px solid #c96757;
+  padding: 0 2rem;
+  font-weight: 600;
+}
+.content__repos-display--repos :first-child {
+  display: flex;
+  flex-direction: column;
+}
+.content__repos-display--repos p {
+  padding-bottom: 1rem;
+}
+.content__repos-display--repos div {
+  background-color: #e9eaec;
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+.content__repos-display--repos div p {
+  font-weight: 600;
+  font-size: 12px;
+  padding-bottom: 0;
+}
+.content__repos-search {
+  margin: 2rem 0;
+}
+.content__repos-search input {
+  width: 80%;
+  padding: 1rem 1rem;
+  border-color: rgba(204, 204, 204, 0.274);
+  font-size: 14px;
+  border-radius: 0.5rem;
+}
+.content__repos-search input:active {
+  border-color: rgba(45, 86, 148, 0.274);
+}
+.content__repos-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.content__repos-card {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  align-items: flex-start;
+}
+.content__repos-card--container {
+  display: flex;
+  flex-direction: column;
+}
+.content__repos-card--container :last-child {
+  margin-top: 2.5rem;
+}
+.content__repos-card--details {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+.content__repos-card--details a {
+  text-decoration: none;
+}
+.content__repos-card--details a:hover {
+  text-decoration: underline;
+}
+.content__repos-card--details :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.content__repos-card--details :first-child {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #0366d6;
+}
+.content__repos-card--details :nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #586069;
+}
+.content__repos-card--details .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+}
+.content__repos-card--details .stats .stargazers {
+  display: flex;
+  align-items: center;
+}
+.content__repos-card--details .stats .stargazers svg {
+  margin-right: 0.4rem;
+}
+.content__repos-card--details .stats .stargazers p {
+  margin-bottom: 0.6rem;
+}
+.content__repos-card--details .stats .lang {
+  display: flex;
+  align-items: center;
+}
+.content__repos-card--details .stats .lang .lang__color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  margin-top: 0.5rem;
+}
+.content__repos-card--details .stats p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #586069;
+}
+.content__repos-card--actions {
+  margin-top: 0.1rem;
+}
+.content__repos-card--actions button {
+  border: 1px solid #ccc;
+  padding: 0rem 2rem;
+  font-family: inherit;
+  border-radius: 0.3rem;
+  background: #fafbfd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.content__repos-card--actions button:hover {
+  background: #f8f8f8;
+}
+.content__repos-card--actions button svg {
+  margin-bottom: 2rem;
+  margin-right: 0.5rem;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #02b346;
+  outline: 1px solid transparent;
+  animation: pulse 1.2s ease-in-out infinite;
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .loader {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.github__logo {
+  width: 140px;
+  height: 140px;
+}
+.github__logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.error__image {
+  width: 350px;
+  height: 300px;
+}
+.error__image img {
+  width: 100%;
+  height: 100%;
+}
+.error p {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.error .button {
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 0rem 2rem;
+  font-family: inherit;
+  border-radius: 0.3rem;
+  background: #fafbfd;
+  height: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.content {
+  display: none;
+  justify-content: space-between;
+  padding: 4rem;
+}
+.content__profile {
+  flex-basis: 30%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content__repos {
+  flex-basis: 70%;
+  width: 100%;
+  height: 100vh;
+}
+
+main.container {
+  display: grid;
+  place-items: center;
+  margin-top: 6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

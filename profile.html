@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js" type="module"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/4b69ab2878.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <a href="/">GH Profile Finder</a>
+      <div class="header__avatar">
+        <img alt="Error Image"/>
+      </div>
+    </section>
+    <div class="loader"></div>
+    <div class="error">
+        <div class="error__image">
+            <img src="/404.png" alt="Error Image"/>
+            <p>Uh, Oh, User not found.</p>
+            <a href="/" class="button">Go back</a>
+        </div>
+    </div>
+    <main class="content">
+      <section class="content__profile">
+        <div class="content__profile-avatar">
+          <img
+            class="avatar__img"
+       
+            alt="Github Profile Avatar"
+          />
+        </div>
+        <div class="content__profile-description">
+         
+        </div>
+      </section>
+      <section class="content__repos">
+        <div class="content__repos-display">
+          <div class="content__repos-display--overview tab">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              class="icon"
+              style="fill: #73787c"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 3.75A.75.75 0 01.75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.496 4.496 0 0115.75 3h7.5a.75.75 0 01.75.75v15.063a.75.75 0 01-.755.75l-7.682-.052a3 3 0 00-2.142.878l-.89.891a.75.75 0 01-1.061 0l-.902-.901a3 3 0 00-2.121-.879H.75a.75.75 0 01-.75-.75v-15zm11.247 3.747a3 3 0 00-3-2.997H1.5V18h6.947a4.5 4.5 0 012.803.98l-.003-11.483zm1.503 11.485V7.5a3 3 0 013-3h6.75v13.558l-6.927-.047a4.5 4.5 0 00-2.823.971z"
+              ></path>
+            </svg>
+            <p>Overview</p>
+          </div>
+          <div class="content__repos-display--repos tab">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 18 18"
+              width="16"
+              height="16"
+              class="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"
+              ></path>
+            </svg>
+            <p>Repositories</p>
+            <div>
+              <p id="repos__count">24</p>
+            </div>
+          </div>
+          <div class="content__repos-display--overview tab">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              class="icon"
+              style="fill: #73787c"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"
+              ></path>
+            </svg>
+            <p>Projects</p>
+          </div>
+          <div class="content__repos-display--overview tab">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              class="icon"
+              style="fill: #73787c"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.876.64a1.75 1.75 0 00-1.75 0l-8.25 4.762a1.75 1.75 0 00-.875 1.515v9.525c0 .625.334 1.203.875 1.515l8.25 4.763a1.75 1.75 0 001.75 0l8.25-4.762a1.75 1.75 0 00.875-1.516V6.917a1.75 1.75 0 00-.875-1.515L12.876.639zm-1 1.298a.25.25 0 01.25 0l7.625 4.402-7.75 4.474-7.75-4.474 7.625-4.402zM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947L3.501 7.64zm9.25 13.421l7.625-4.402a.25.25 0 00.125-.216V7.639l-7.75 4.474v8.947z"
+              ></path>
+            </svg>
+            <p>Packages</p>
+          </div>
+        </div>
+        <div class="content__repos-search">
+          <input type="text" placeholder="Find a repository..." />
+        </div>
+        <div class="seperator"></div>
+        <div class="content__repos-container">
+          <!-- <div class="content__repos-card--container"> -->
+            <!-- <div class="content__repos-card">
+              <div class="content__repos-card--details">
+                <p>audioly</p>
+                <p>An audio service web app - a pratical interview project</p>
+                <div class="stats">
+                  <div>
+                    <p></p>
+                    <p>Javascript</p>
+                  </div>
+                  <p>4</p>
+                  <p>22</p>
+                  <p>Updated 9mins ago.</p>
+                </div>
+              </div>
+              <div class="content__repos-card--actions">
+                <button>Star</button>
+              </div>
+            </div>
+            <div class="seperator"></div>
+          </div>
+          <div class="content__repos-card--container">
+            <div class="content__repos-card">
+              <div class="content__repos-card--details">
+                <p>audioly</p>
+                <p>An audio service web app - a pratical interview project</p>
+                <div class="stats">
+                  <div>
+                    <p></p>
+                    <p>Javascript</p>
+                  </div>
+                  <p>4</p>
+                  <p>22</p>
+                  <p>Updated 9mins ago.</p>
+                </div>
+              </div>
+              <div class="content__repos-card--actions">
+                <button>Star</button>
+              </div> -->
+            </div>
+
+            
+            <div class="seperator"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
