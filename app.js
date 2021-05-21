@@ -6,7 +6,6 @@ window.addEventListener("load", () => {
 });
 
 const baseUrl = "https://api.github.com/graphql";
-const token = "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";
 
 const headers = {
   "Content-Type": "application/json",
