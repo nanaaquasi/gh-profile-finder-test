@@ -34,6 +34,18 @@ body {
   margin: 0 auto;
   padding: 4rem;
 }
+@media (max-width: 75em) {
+  .form_container {
+    width: 80%;
+    padding: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .form_container {
+    width: 100%;
+    padding: 2rem;
+  }
+}
 
 form {
   display: flex;
@@ -71,6 +83,12 @@ form .submit__btn {
   justify-content: space-between;
   color: #fff;
 }
+@media (max-width: 37.5em) {
+  .header {
+    width: 100%;
+    padding: 1rem 3rem;
+  }
+}
 .header p {
   color: #fff;
   font-weight: 700;
@@ -100,6 +118,18 @@ form .submit__btn {
   border: 3px solid #9e9aa1;
   margin-bottom: 2rem;
 }
+@media (max-width: 75em) {
+  .content__profile-avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__profile-avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
 .content__profile-avatar img {
   width: 100%;
   height: 100%;
@@ -109,7 +139,6 @@ form .submit__btn {
 .content__profile-description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .content__profile-description hr {
   color: rgba(90, 90, 90, 0.212);
@@ -140,12 +169,32 @@ form .submit__btn {
   color: #24292e;
   margin-bottom: 2rem;
 }
+@media (max-width: 75em) {
+  .content__profile-description--about .intro {
+    width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__profile-description--about .intro {
+    width: 100%;
+  }
+}
 .content__profile-description--about .stats {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
+}
+@media (max-width: 75em) {
+  .content__profile-description--about .stats {
+    width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__profile-description--about .stats {
+    width: 100%;
+  }
 }
 .content__profile-description--about .stats div {
   display: flex;
@@ -170,12 +219,32 @@ form .submit__btn {
   border-bottom: 1px solid rgba(94, 94, 94, 0.085);
   padding: 0 2rem 0 0rem;
 }
+@media (max-width: 75em) {
+  .content__repos-display {
+    overflow-x: auto;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-display {
+    overflow-x: auto;
+  }
+}
 .content__repos-display .tab {
   display: flex;
   align-items: center;
 }
 .content__repos-display .tab:not(:first-child) {
   margin-left: 4rem;
+}
+@media (max-width: 75em) {
+  .content__repos-display .tab:not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-display .tab:not(:first-child) {
+    margin-left: 1rem;
+  }
 }
 .content__repos-display .tab .icon {
   margin-right: 0.8rem;
@@ -221,6 +290,16 @@ form .submit__btn {
   font-size: 14px;
   border-radius: 0.5rem;
 }
+@media (max-width: 75em) {
+  .content__repos-search input {
+    width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-search input {
+    width: 100%;
+  }
+}
 .content__repos-search input:active {
   border-color: rgba(45, 86, 148, 0.274);
 }
@@ -229,23 +308,38 @@ form .submit__btn {
   flex-direction: column;
   width: 90%;
 }
-.content__repos-card {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0;
-  align-items: flex-start;
+@media (max-width: 75em) {
+  .content__repos-container {
+    width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-container {
+    width: 100%;
+  }
 }
 .content__repos-card--container {
   display: flex;
   flex-direction: column;
 }
 .content__repos-card--container :last-child {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+}
+.content__repos-card--header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content__repos-card--header a {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #0366d6;
 }
 .content__repos-card--details {
   display: flex;
   flex-direction: column;
-  flex-basis: 60%;
 }
 .content__repos-card--details a {
   text-decoration: none;
@@ -255,12 +349,6 @@ form .submit__btn {
 }
 .content__repos-card--details :not(:first-child) {
   margin-top: 0.5rem;
-}
-.content__repos-card--details :first-child {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  color: #0366d6;
 }
 .content__repos-card--details :nth-child(2) {
   font-size: 14px;
@@ -272,7 +360,17 @@ form .submit__btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 55%;
+  width: 35%;
+}
+@media (max-width: 75em) {
+  .content__repos-card--details .stats {
+    width: 45%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-card--details .stats {
+    width: 85%;
+  }
 }
 .content__repos-card--details .stats .stargazers {
   display: flex;
@@ -315,11 +413,23 @@ form .submit__btn {
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 75em) {
+  .content__repos-card--actions button {
+    padding: 0rem 1rem;
+    height: 30px;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos-card--actions button {
+    padding: 0rem 1rem;
+    height: 30px;
+  }
+}
 .content__repos-card--actions button:hover {
   background: #f8f8f8;
 }
 .content__repos-card--actions button svg {
-  margin-bottom: 2rem;
+  margin-bottom: 0.6rem;
   margin-right: 0.5rem;
 }
 
@@ -373,6 +483,18 @@ form .submit__btn {
   width: 350px;
   height: 300px;
 }
+@media (max-width: 75em) {
+  .error__image {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 37.5em) {
+  .error__image {
+    width: 200px;
+    height: 200px;
+  }
+}
 .error__image img {
   width: 100%;
   height: 100%;
@@ -406,6 +528,18 @@ form .submit__btn {
   justify-content: space-between;
   padding: 4rem;
 }
+@media (max-width: 75em) {
+  .content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .content {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
 .content__profile {
   flex-basis: 30%;
   width: 100%;
@@ -414,16 +548,36 @@ form .submit__btn {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 75em) {
+  .content__profile {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__profile {
+    flex-basis: 100%;
+  }
+}
 .content__repos {
   flex-basis: 70%;
   width: 100%;
   height: 100vh;
 }
+@media (max-width: 75em) {
+  .content__repos {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .content__repos {
+    flex-basis: 100%;
+  }
+}
 
 main.container {
   display: grid;
   place-items: center;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 /*# sourceMappingURL=style.css.map */
