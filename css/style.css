@@ -133,6 +133,7 @@ form .submit__btn {
   margin: 2rem 0;
 }
 .content__profile-description--about .intro {
+  width: 80%;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -140,6 +141,7 @@ form .submit__btn {
   margin-bottom: 2rem;
 }
 .content__profile-description--about .stats {
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;

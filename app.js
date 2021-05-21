@@ -9,7 +9,7 @@ const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
   "Content-Type": "application/json",
-  Authorization: "bearer " + "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",
+  Authorization: "bearer " + `${token}`,
 };
 
 const fetchUserProfile = async (username) => {
