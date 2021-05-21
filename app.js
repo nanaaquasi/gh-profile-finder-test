@@ -193,6 +193,6 @@ const fetchUserProfile = async (username) => {
       document.querySelector(".error").style.display = "block";
     }
   } catch (error) {
-    console.log(error);
+    console.log("error", error);
   }
 };
