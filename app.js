@@ -185,8 +185,6 @@ const fetchUserProfile = async (username) => {
       data.user.avatarUrl &&
         headerAvatar.setAttribute("src", data.user.avatarUrl);
       avatar.setAttribute("src", data.user.avatarUrl);
-
-      console.log(data);
     }
     if (data.user === null) {
       document.querySelector(".content").style.display = "none";
