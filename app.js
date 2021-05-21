@@ -9,7 +9,7 @@ const baseUrl = "https://api.github.com/graphql";
 
 const headers = {
   "Content-Type": "application/json",
-  Authorization: "bearer " + "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",
+  Authorization: "bearer " + "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",
 };
 
 const fetchUserProfile = async (username) => {
@@ -65,10 +65,10 @@ const fetchUserProfile = async (username) => {
     document.querySelector(".content").style.display = "flex";
     document.querySelector(".loader").style.display = "none";
 
-    if (data.user !== null) {
+    if (data && data?.user !== null) {
       const today = new Date();
 
-      const reposContent = data.user?.repositories.nodes
+      const reposContent = data?.user?.repositories.nodes
         .map((repo) => {
           return `
       <div class="content__repos-card--container">
